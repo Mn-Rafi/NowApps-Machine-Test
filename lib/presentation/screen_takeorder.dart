@@ -67,7 +67,6 @@ class ScreenTakeOrder extends StatelessWidget {
                   },
                 ),
               ],
-              backgroundColor: kContentColorLightTheme,
             ),
             body: BlocBuilder<TakeOrderBloc, TakeOrderState>(
               builder: (context, state) {
