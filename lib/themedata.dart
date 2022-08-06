@@ -17,7 +17,6 @@ AppBar customAppBar(
   return AppBar(
     title: Text(title),
     centerTitle: true,
-    backgroundColor: kContentColorLightTheme,
   );
 }
 
