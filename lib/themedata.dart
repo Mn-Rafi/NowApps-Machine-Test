@@ -57,17 +57,17 @@ customShowDialogue(BuildContext context, String title, String content,
           content: Text(content),
           actions: <Widget>[
             TextButton(
-              child: Text('Cancel'),
+              child: const Text('Cancel'),
               onPressed: () {
                 Navigator.of(context).pop();
               },
             ),
             TextButton(
-              child: Text('Yes'),
               onPressed: onPressed ??
                   () {
                     Navigator.of(context).pop();
                   },
+              child: const Text('Yes'),
             ),
           ],
         );
@@ -86,7 +86,7 @@ customShowDialogueTwo(BuildContext context, String title, String content) {
           ),
           actions: <Widget>[
             TextButton(
-              child: Text('Ok'),
+              child: const Text('Ok'),
               onPressed: () {
                 Navigator.of(context).pop();
               },

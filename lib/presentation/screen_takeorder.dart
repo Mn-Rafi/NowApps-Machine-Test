@@ -7,7 +7,6 @@ import 'package:nowapps/logic/bloc_take_oder/take_order_bloc.dart';
 import 'package:nowapps/presentation/screen_cart.dart';
 import 'package:nowapps/presentation/screen_checkin.dart';
 import 'package:nowapps/presentation/widgets/custom_productdetails_tile.dart';
-import 'package:nowapps/repositories/models/product_response_model.dart';
 import 'package:nowapps/repositories/product_listapi_services/product_listapi_services.dart';
 import 'package:nowapps/themedata.dart';
 import 'package:page_transition/page_transition.dart';
@@ -45,7 +44,7 @@ class ScreenTakeOrder extends StatelessWidget {
                     final retailer = await getBox.read('retailer');
                     Get.offAll(ScreenCheckIn(companyName: retailer));
                   },
-                  child: Icon(Icons.arrow_back_rounded)),
+                  child: const Icon(Icons.arrow_back_rounded)),
               centerTitle: true,
               actions: [
                 BlocBuilder<CartControllBloc, CartControllState>(
@@ -60,7 +59,7 @@ class ScreenTakeOrder extends StatelessWidget {
                                 child: BlocProvider.value(
                                   value: BlocProvider.of<CartControllBloc>(
                                       context),
-                                  child: ScreenCart(),
+                                  child: const ScreenCart(),
                                 )));
                       });
                     }
@@ -87,7 +86,7 @@ class ScreenTakeOrder extends StatelessWidget {
                     physics: const BouncingScrollPhysics(),
                     itemCount: 3,
                     itemBuilder: (context, index) {
-                      return CustomProductDetailsTileShimmer();
+                      return const CustomProductDetailsTileShimmer();
                     });
               },
             ),
@@ -114,7 +113,7 @@ class ScreenTakeOrder extends StatelessWidget {
               radius: 9,
               child: Text(
                 count,
-                style: TextStyle(fontSize: 13),
+                style: const TextStyle(fontSize: 13),
               ),
             ),
         ],

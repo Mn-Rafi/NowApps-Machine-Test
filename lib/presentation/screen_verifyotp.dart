@@ -13,12 +13,11 @@ import 'package:nowapps/presentation/widgets/custom_submitbutton.dart';
 import 'package:nowapps/themedata.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:sizer/sizer.dart';
-import 'package:pin_code_fields/pin_code_fields.dart';
 
 class ScreenVerifyOTP extends StatelessWidget {
   ScreenVerifyOTP({Key? key}) : super(key: key);
-  TextEditingController newTextEditingController = TextEditingController();
-  static TextEditingController otpTextController = TextEditingController();
+  final newTextEditingController = TextEditingController();
+  final TextEditingController otpTextController = TextEditingController();
   final FocusNode focusNode = FocusNode();
 
   @override
@@ -92,7 +91,7 @@ class ScreenVerifyOTP extends StatelessWidget {
                           context,
                           PageTransition(
                               type: PageTransitionType.fade,
-                              child: ScreenRetailersList()),
+                              child: const ScreenRetailersList()),
                           (route) => false);
                     }
                     if (state is LoginScreenLoading) {

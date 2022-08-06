@@ -39,7 +39,7 @@ class CustomCartButton extends StatelessWidget {
                   context.read<CartControllBloc>().add(
                       CartControllRemoveToCart(index: index, product: product));
                 },
-                child: Icon(Icons.remove)),
+                child: const Icon(Icons.remove)),
           InkWell(
             onTap: quantity == '1'
                 ? () {
@@ -62,7 +62,7 @@ class CustomCartButton extends StatelessWidget {
                     .read<CartControllBloc>()
                     .add(CartControllAddToCart(index: index, product: product));
               },
-              child: Icon(Icons.add)),
+              child: const Icon(Icons.add)),
         ],
       ),
     );

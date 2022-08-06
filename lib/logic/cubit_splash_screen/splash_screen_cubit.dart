@@ -2,7 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:meta/meta.dart';
+// import 'package:meta/meta.dart';
 import 'package:nowapps/presentation/screen_checkin.dart';
 import 'package:nowapps/presentation/screen_login.dart';
 import 'package:nowapps/presentation/screen_retailers.dart';

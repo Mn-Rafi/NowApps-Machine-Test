@@ -98,7 +98,7 @@ decreaseQty({required int productID}) async {
     if (qtyAsInt! > 1) {
       await _db.rawUpdate(
           'UPDATE Cart SET quantity = quantity - 1 WHERE id = ?', [productID]);
-      log('inCartIDs ${inCartIDs}');
+      log('inCartIDs $inCartIDs');
     } else {
       removeFromCart(productID);
     }
@@ -108,7 +108,7 @@ decreaseQty({required int productID}) async {
 removeFromCart(int productID) async {
   await _db.rawDelete('DELETE FROM Cart WHERE id = ?', [productID]);
   inCartIDs.removeWhere((element) => element == productID);
-  log('inCartIDs ${inCartIDs}');
+  log('inCartIDs $inCartIDs');
 }
 
 deleteCart() async {

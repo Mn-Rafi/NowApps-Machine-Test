@@ -8,7 +8,7 @@ class ProductListApiServices {
     Response response = await dio.get(
       'https://jsonkeeper.com/b/YIDG',
     );
-    log('response ${response}');
+    log('response $response');
     return response;
   }
 }
